@@ -1,9 +1,11 @@
+--> 函数, 字符预览窗口
+
 -- Offical
 require('goto-preview').setup {
     width = 80; -- Width of the floating window
     height = 10; -- Height of the floating window
     border = { "↖", "─", "┐", "│", "┘", "─", "└", "│" }; -- Border characters of the floating window
-    default_mappings = false; -- Bind default mappings
+    default_mappings = true; -- Bind default mappings
     debug = false; -- Print debug information
     opacity = nil; -- 0-100 opacity level of the floating window where 100 is fully transparent.
     resizing_mappings = false; -- Binds arrow keys to resizing the floating window.
@@ -19,13 +21,14 @@ require('goto-preview').setup {
 }
 
 
+--[[
 -- keymaps
 vim.keymap.set("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})
 vim.keymap.set("n", "gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", {noremap=true})
 vim.keymap.set("n", "gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", {noremap=true})
 vim.keymap.set("n", "gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", {noremap=true})
 vim.keymap.set("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", {noremap=true})
---[[
+-- default
 nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>
 nnoremap gpt <cmd>lua require('goto-preview').goto_preview_type_definition()<CR>
 nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>

@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     -- 启动界面
+    -- use { 'goolord/alpha-nvim' }
     use {
         'goolord/alpha-nvim',
         config = function()
@@ -99,6 +100,7 @@ return require('packer').startup(function(use)
     use 'gelguy/wilder.nvim' -- 命令模式补全
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' } -- 折叠
     use 'folke/zen-mode.nvim' -- 专注模式, 中心窗口
+    use 'windwp/nvim-spectre' -- 文本替换
 
 
 

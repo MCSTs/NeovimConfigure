@@ -1,3 +1,5 @@
+--> 命令行模式窗口化, 通知...
+
 require("noice").setup({
     lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**

@@ -37,7 +37,25 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 
+-- 预留行列
+vim.o.scrolloff = 5
+vim.o.sidescrolloff = 12
+
+-- 右侧参考线
+vim.opt.colorcolumn = "80"
+
+-- 禁止创建备份文件
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
+
+-- 补全最多显示10行
+vim.o.pumheight = 10
+
+
 -- 外观
 opt.termguicolors = true
-opt.signcolumn = "yes"
+vim.o.termguicolors = true
 vim.o.background = "dark"
+-- 显示左侧图标指示列
+opt.signcolumn = "yes"

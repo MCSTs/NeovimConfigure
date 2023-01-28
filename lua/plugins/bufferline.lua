@@ -1,3 +1,5 @@
+--> buffer可视化显示
+
 vim.opt.termguicolors = true
 
 require("bufferline").setup {

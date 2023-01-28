@@ -1,3 +1,5 @@
+--> 底部状态栏
+
 require('lualine').setup({
     options = {
         -- theme = 'tokyonight'

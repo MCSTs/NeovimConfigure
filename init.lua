@@ -9,6 +9,7 @@ require("core.keymaps")
 -- 插件
 require("plugins.colorscheme")
 require("plugins.lualine")
+-- require("plugins.alpha")
 require("plugins.nvim-tree")
 require("plugins.treesitter")
 require("plugins.autopairs")
@@ -29,6 +30,9 @@ require("plugins.nvim-ufo")
 require("plugins.wilder")
 require("plugins.goto-preview")
 require("plugins.zen-mode")
+require("plugins.nvim-spectre")
 
 
 -- require("plugins.noice")
+
+-- vim.opt.colorcolumn = "80"

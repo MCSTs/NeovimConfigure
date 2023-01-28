@@ -1,4 +1,6 @@
--->C/C++/Rust
+--> Debug
+
+--> 1.C/C++/Rust
 local dap = require('dap')
 dap.adapters.codelldb = {
     type = 'server',
