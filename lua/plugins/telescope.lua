@@ -32,3 +32,7 @@ vim.keymap.set('n', '<leader>fq', builtin.quickfix, opts)
 
 -- 拼写建议
 vim.keymap.set('n', '<leader>fp', builtin.spell_suggest, opts)
+
+-- 选中高亮
+vim.keymap.set('n', '<leader>fe', builtin.highlights, opts)
+

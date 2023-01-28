@@ -56,6 +56,18 @@ return require('packer').startup(function(use)
             "rcarriga/nvim-notify",
         }
     })
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
     -- 主题
     use 'folke/tokyonight.nvim'
     use 'sainnhe/sonokai'
@@ -101,6 +113,7 @@ return require('packer').startup(function(use)
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' } -- 折叠
     use 'folke/zen-mode.nvim' -- 专注模式, 中心窗口
     use 'windwp/nvim-spectre' -- 文本替换
+    use 'mg979/vim-visual-multi' -- 多光标操作
 
 
 

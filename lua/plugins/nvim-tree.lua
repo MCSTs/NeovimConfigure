@@ -30,7 +30,7 @@ require("nvim-tree").setup({
     },
     view = {
         -- 宽度
-        width = 30,
+        width = 32,
         side = "left", -- or "right"
         -- 隐藏根目录
         hide_root_folder = false,

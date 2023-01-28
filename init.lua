@@ -31,8 +31,7 @@ require("plugins.wilder")
 require("plugins.goto-preview")
 require("plugins.zen-mode")
 require("plugins.nvim-spectre")
-
+require("plugins.vim-visual-multi")
 
 -- require("plugins.noice")
 
--- vim.opt.colorcolumn = "80"
