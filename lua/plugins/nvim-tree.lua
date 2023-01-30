@@ -21,7 +21,7 @@ require("nvim-tree").setup({
     },
     -- 隐藏.文件 和 node_modules文件夹
     filters = {
-        -- dotfile = false,
+        -- dotfile = true
         custom = { '^\\.', '^.git$', '^node_modules$' }
     },
     git = {

@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
+local opts = { silent = true, noremap = true }
 
 -- switch case with '`' key
 keymap.set("n", "`", "~")
@@ -29,6 +30,16 @@ keymap.set("n", "<leader>rc", ":e /home/mcst/.config/nvim/init.lua<CR>")
 -- 窗口
 keymap.set("n", "<leader>sl", "<C-w>v")
 keymap.set("n", "<leader>sj", "<C-w>s")
+
+-- 切换buffer
+keymap.set("n", "<M-n>", ":bnext<CR>")
+keymap.set("n", "<M-p>", ":bprevious<CR>")
+
+-- tab
+keymap.set("n", "<M-j>", ":tabNext<CR>", opts)
+keymap.set("n", "<M-k>", ":tabprevious<CR>", opts)
+keymap.set("n", "<M-q>", ":tabclose<CR>", opts)
+keymap.set("n", "<M-t>", ":tabnew %<CR>", opts)
 
 -- 取消高亮
 keymap.set("n", "<leader><CR>", ":nohl<CR>")
@@ -61,9 +72,6 @@ keymap.set("n", "<right>", ":vertical resize+5<CR>")
 --
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
--- 切换buffer
-keymap.set("n", "<M-n>", ":bnext<CR>")
-keymap.set("n", "<M-p>", ":bprevious<CR>")
 
 -- vim-floaterm
 keymap.set("n", "<leader>t", ":FloatermToggle<CR>")
