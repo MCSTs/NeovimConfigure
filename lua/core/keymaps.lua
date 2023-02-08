@@ -78,7 +78,7 @@ keymap.set("n", "<leader>t", ":FloatermToggle<CR>")
 keymap.set("t", "<C-t>", "<C-\\><C-n>:FloatermToggle<CR>")
 local commandc = ":FloatermNew! cc % -o %< -Wall -g && ./%<<CR>"
 local commandcpp = ":FloatermNew! c++ % -o %< -Wall -g && ./%<<CR>"
-local commandgo = ":FloatermNew! go build % -o %< && ./%<<CR>"
+local commandgo = ":FloatermNew! go run %<CR>"
 keymap.set("n", "<leader>c", commandc)
 keymap.set("n", "<leader>C", commandcpp)
 keymap.set("n", "<leader>go", commandgo)
@@ -110,3 +110,6 @@ keymaps = {
 
 -- 文件大纲
 keymap.set("n", "<leader>p", ":SymbolsOutline<CR>")
+
+-- 窗口尺寸聚焦
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts)

@@ -1,5 +1,5 @@
 -- Speedup Neovim
-require('impatient')
+require("impatient")
 
 require("plugins.plugins-setup")
 
@@ -34,4 +34,3 @@ require("plugins.nvim-spectre")
 require("plugins.vim-visual-multi")
 
 -- require("plugins.noice")
-
