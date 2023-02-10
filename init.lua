@@ -32,5 +32,8 @@ require("plugins.goto-preview")
 require("plugins.zen-mode")
 require("plugins.nvim-spectre")
 require("plugins.vim-visual-multi")
+require("plugins.hop")
+require("plugins.nvim-lastplace")
 
+-- require("plugins.nvim-lightbulb")
 -- require("plugins.noice")

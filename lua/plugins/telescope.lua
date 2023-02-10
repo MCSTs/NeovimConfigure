@@ -37,11 +37,12 @@ keymap.set('n', '<leader>fp', builtin.spell_suggest, opts)
 -- 选中高亮
 keymap.set('n', '<leader>fe', builtin.vim_options, opts)
 
+-- 标记
+keymap.set('n', '<leader>fm', builtin.marks, opts)
+
 --> Git
 -- 查看commits 记录
 -- checkout action <cr>, reset mixed <C-r>m, reset soft <C-r>s and reset hard <C-r>h
 keymap.set('n', '<leader>gc', builtin.git_commits, opts)
-
--- 
 keymap.set('n', '<leader>gb', builtin.git_branches, opts)
 keymap.set('n', '<leader>gs', builtin.git_status, opts)

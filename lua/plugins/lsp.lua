@@ -1,34 +1,34 @@
 --> Language Server Protocal
 
 require("mason").setup({
-	ui = {
-		icons = {
-			package_installed = "✓",
-			package_pending = "➜",
-			package_uninstalled = "✗",
-		},
-	},
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗",
+    },
+  },
 })
 
 require("mason-lspconfig").setup({
-	-- 确保安装，根据需要填写
-	ensure_installed = {
-		"sumneko_lua",
-	},
+  -- 确保安装，根据需要填写
+  ensure_installed = {
+    "sumneko_lua",
+  },
 })
 
 -- Change the Diagnostic symbols in the sign column (gutter)
 -- (not in youtube nvim video)
 local signs = { Error = "", Warn = "", Hint = "ﴞ", Info = "" }
 for type, icon in pairs(signs) do
-	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("lspconfig").sumneko_lua.setup({
-	capabilities = capabilities,
+  capabilities = capabilities,
 })
 
 --> Python
@@ -36,18 +36,18 @@ require("lspconfig").sumneko_lua.setup({
 --   capabilities = capabilities,
 -- }
 require("lspconfig").pylsp.setup({
-	capabilities = capabilities,
+  capabilities = capabilities,
 })
 
 --> C/C++
 require("lspconfig").clangd.setup({
-	capabilities = capabilities,
+  capabilities = capabilities,
 })
 
 -->golang
 -- require'lspconfig'.golangci_lint_ls.setup{}
 require("lspconfig").gopls.setup({
-	capabilities = capabilities,
+  capabilities = capabilities,
 })
 
 --> offical
@@ -64,5 +64,5 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
 -- vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
 -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 vim.keymap.set("n", "<space>lf", function()
-	vim.lsp.buf.format({ async = true })
+  vim.lsp.buf.format({ async = true })
 end, bufopts)
