@@ -13,6 +13,16 @@ if (vim.fn.has('termguicolors') == 1) then
     vim.opt.termguicolors = true
 end
 
+-- encoding
+-- set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+-- set termencoding=utf-8
+-- set encoding=utf-8
+-- 1:8biy, 2:2byte, u:Unicode
+-- opt.fileencodings = "2byte-euc-cn, Unicode-utf-8, "
+opt.fileencodings = "utf-8,ucs-bom,gb18030,gbk,gb2312,cp936"
+opt.termencoding = "utf-8"
+opt.encoding = "utf-8"
+
 -- tabs
 opt.autoindent  = true
 opt.tabstop     = 2
